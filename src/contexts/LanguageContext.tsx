@@ -8,7 +8,7 @@ interface LanguageContextType {
   toggleLanguage: () => void;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const LanguageContext = createContext<LanguageContextType | undefined>({} as LanguageContextType);
 
 interface LanguageProviderProps {
   children: ReactNode;
