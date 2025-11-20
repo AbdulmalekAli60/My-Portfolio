@@ -62,7 +62,6 @@ export default function Projects({
         scrollTrigger: {
           trigger: containerRef.current,
           toggleActions: "restart none none none",
-          // markers:true,
         },
         delay: delay, //from props
       }
@@ -139,10 +138,16 @@ export default function Projects({
                     href={links.netlifyLink}
                     style={{ color: "white" }}
                     target="_blank"
-                    className="w-full bg-visitWebsiteButtonColor dark:bg-darkVisitWebsiteButtonColor text-center py-2 px-4 rounded-lg  flex items-center justify-center"
+                    className={`${
+                      links.netlifyLink === ""
+                        ? " opacity-50 cursor-not-allowed"
+                        : ""
+                    }  w-full bg-visitWebsiteButtonColor  dark:bg-darkVisitWebsiteButtonColor text-center py-2 px-4 rounded-lg  flex items-center justify-center`}
                   >
                     <ExternalLink className="m-2" size={20} />
-                    {t("Visit Website", nameSpace)}
+                    {links.netlifyLink === ""
+                      ? t("Currently Unavailable", nameSpace)
+                      : t("Visit Website", nameSpace)}
                   </a>
                   <a
                     href={links.repoLink}
@@ -162,3 +167,4 @@ export default function Projects({
     </>
   );
 }
+// "netlifyLink": "https://waraqat.vercel.app/Home",

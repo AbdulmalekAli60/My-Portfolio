@@ -1,5 +1,4 @@
 [
-
   {
     "projectsID": 1,
     "projectName": "Waraqat",
@@ -21,7 +20,7 @@
       "Docker"
     ],
     "links": {
-      "netlifyLink": "https://waraqat.vercel.app/Home",
+      "netlifyLink": "",
       "repoLink": "https://github.com/AbdulmalekAli60/Waraqat/tree/main"
     }
   },
@@ -128,4 +127,3 @@
     }
   }
 ]
-
