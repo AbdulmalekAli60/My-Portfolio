@@ -42,23 +42,12 @@ export default function NavigationMenu() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // useEffect(() => {
-  //   if (isVisible) {
-  //     document.body.style.overflow = 'hidden';
-  //   } else {
-  //     document.body.style.overflow = '';
-  //   }
-
-  //   return () => {
-  //     document.body.style.overflow = '';
-  //   };
-  // }, [isVisible]);
-
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-50">
       {/* Toggle Button */}
       <button
         onClick={() => setIsVisible(!isVisible)}
+        aria-label="menu"
         className="fixed top-4 right-4 z-50 p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition-colors duration-300 pointer-events-auto"
       >
         {isVisible ? (

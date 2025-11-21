@@ -49,12 +49,14 @@ export default function Footer() {
         >
           <Linkedin
             size={32}
+            aria-label="Linkedin"
             className="text-footerColor dark:text-darkFooterColor"
           />
         </a>
 
         <a
           href="https://github.com/AbdulmalekAli60"
+          aria-label="GitHub"
           className="  hover:opacity-55  transition-all duration-300"
         >
           <GithubIcon

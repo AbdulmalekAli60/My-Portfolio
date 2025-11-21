@@ -60,6 +60,7 @@ const Input = ({
         </div>
         <input
           type="text"
+          name={inputName}
           value={stateValue}
           onChange={changeInputValue}
           className={`py-3 w-full border-buttonColor rounded-lg text-sm bg-backGroundColor dark:bg-darkBackGroundColor
@@ -95,7 +96,6 @@ export default function Contact() {
         scrollTrigger: {
           trigger: containerRef.current,
           toggleActions: "restart none none none",
-          // markers:true,
         },
       }
     );
@@ -199,13 +199,14 @@ export default function Contact() {
               ></textarea>
             </div>
             <button
+              onClick={() => console.table({ ...emailInformation })}
               type="submit"
               className={`${arStyles} px-4 py-2 mt-5 w-full opacity-100 hover:opacity-70 transition-all duration-300 bg-contactButtonColor text-base rounded-xl`}
             >
               <div className="flex justify-center items-center">
                 {sendingState === "default" && t("Send")}
                 {sendingState === "sending" && (
-                  <Loader className="mr-2 dark:text-white" />
+                  <Loader className="mr-2 dark:text-white animate-spin" />
                 )}
                 {sendingState === "sent" && (
                   <Check className="mr-2 dark:text-white" />
