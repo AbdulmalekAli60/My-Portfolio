@@ -63,7 +63,7 @@ export default function Projects({
           trigger: containerRef.current,
           toggleActions: "restart none none none",
         },
-        delay: delay, //from props
+        delay: delay, 
       }
     );
   }, [isAr, delay]);
